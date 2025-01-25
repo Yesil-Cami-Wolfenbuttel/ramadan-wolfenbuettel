@@ -1,25 +1,87 @@
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background: #ffffff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-  }
-  
-  h1 {
-    color: #2c3e50;
-  }
-  
-  h2 {
-    color: #2980b9;
-  }
-  
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  text-align: center;
+  padding: 20px;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+h1 {
+  color: #0a3a0e;
+  font-size: 2.5em;
+}
+
+h2 {
+  color: #0a3a0e;
+  font-size: 2.5em;
+}
+
+.prayer-times div {
+  margin: 5px 0;
+  font-size: 1.1em;
+}
+
+body.dark-mode .prayer-times div {
+  color: #ffffff; /* Ensure text remains visible in Dark Mode */
+}
+
+body.dark-mode .container {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+#map {
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  background-image: url('https://img.freepik.com/vektoren-premium/dekorativer-orientalischer-hintergrund_199368-168.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.9); /* Slight transparency */
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Adjust text color and font sizes */
+body {
+  color: #0a3a0e; /* General text color */
+}
+
+#countdown {
+  font-size: 2em; /* Larger font size for countdown */
+  font-weight: bold;
+}
+
+.prayer-times div {
+  font-size: 1.5em; /* Larger font size for prayer times */
+  margin: 10px 0;
+}
+
+/* Ensure the countdown styling is applied */
+body #countdown {
+  font-size: 2.5em !important; /* Larger font size */
+  font-weight: bold !important;
+}
+
+/* Adjustable font size for h3 elements */
+h3 {
+  font-size: 1.8em; /* Default size */
+  font-weight: bold;
+  color: #0a3a0e; /* Match the primary text color */
+}
