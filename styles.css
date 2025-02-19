@@ -17,9 +17,11 @@ body {
 }
 
 h1 {
+  font-family: "Brush Script MT", cursive;
   color: #e0c17c;
   font-size: 2.5em;
 }
+
 
 h2 {
   color: #ffffff;
@@ -46,7 +48,7 @@ body.dark-mode .container {
 }
 
 body {
-  background-image: url('https://www.tapeten.com/media/catalog/product/cache/5b18b93ddbe5d6592c6b175f41d24454/w/1/w13397_option3.jpg');
+  background-image: url('https://img.freepik.com/fotos-kostenlos/2d-grafische-tapeten-mit-bunten-koernigen-gradienten_23-2151001513.jpg?semt=ais_hybrid');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -54,8 +56,8 @@ body {
 
 .container {
   background-color: rgba(7, 164, 175, 0.9); /* Slight transparency */
-  padding: 20px;
-  border-radius: 8px;
+  padding: 120px;
+  border-radius: 18px;
 }
 
 /* Adjust text color and font sizes */
@@ -69,7 +71,7 @@ body {
 }
 
 .prayer-times div {
-  font-size: 1.5em; /* Larger font size for prayer times */
+  font-size: 2.0em; /* Larger font size for prayer times */
   margin: 10px 0;
 }
 
@@ -81,7 +83,7 @@ body #countdown {
 
 /* Adjustable font size for h3 elements */
 h3 {
-  font-size: 1.8em; /* Default size */
+  font-size: 2.5em; /* Default size */
   font-weight: bold;
   color: #ffffff; /* Match the primary text color */
 }
