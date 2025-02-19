@@ -30,13 +30,13 @@ document.addEventListener("DOMContentLoaded", () => {
       bis Maghrib`;
     } else {
       // Once Maghrib time is reached
-      document.getElementById('countdown').innerText = 'Iftar Vakti - Allah kabul etsin!';
+      document.getElementById('countdown').innerText = 'Es ist Zeit für Maghrib!';
     }
   }, 1000); // Update every second
 
   // Hadith des Tages
   const hadiths = [
-    "„Das Fasten ist ein Schutz.“ - Sahih al-Bukhari",
+    "„ALLAH'IM SENIN IÇIN ORUÇ TUTTUM, SENIN RIZKINLA ORUCUMU AÇIYORUM. HAMD OLSUN VERMIŞ OLDUĞUN NIMETLERE. OH ALLAH. FÜR DICH HABE ICH GEFASTET UND MIT DEINEN GABEN BEGEHE ICH MEIN IFTAR“ - AMIN",
   ];
 
   const hadithElement = document.getElementById('hadith');
