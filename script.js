@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
       bis Maghrib`;
     } else {
       // Once Maghrib time is reached
-      document.getElementById('countdown').innerText = 'Es ist Zeit für Maghrib!';
+      document.getElementById('countdown').innerText = 'Iftar Vakti - Allah kabul etsin!';
     }
   }, 1000); // Update every second
 
