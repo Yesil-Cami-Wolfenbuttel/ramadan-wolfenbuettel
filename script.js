@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", () => {
   // Dark Mode Toggle
   const toggleTheme = () => {
@@ -10,29 +9,53 @@ document.addEventListener("DOMContentLoaded", () => {
     themeToggleButton.addEventListener('click', toggleTheme);
   }
 
-  // Countdown Timer Logic
-  setInterval(() => {
-    const now = new Date();
-    const maghrib = new Date();
-    maghrib.setHours(17, 32, 0); // Maghrib time (17:32)
-    maghrib.setSeconds(0); // Ensure no leftover seconds
+  // Gebetszeiten
+  const fajrTime = { hours: 5, minutes: 11 }; // Fajr Zeit (05:11)
+  const maghribTime = { hours: 18, minutes: 03 }; // Maghrib Zeit (18:03)
+  const ishaTime = { hours: 19, minutes: 36 }; // Isha Zeit (19:36)
 
-    const diff = maghrib - now; // Difference in milliseconds
+  function updateCountdown() {
+    const now = new Date();
+    const fajr = new Date();
+    const maghrib = new Date();
+    const isha = new Date();
+
+    fajr.setHours(fajrTime.hours, fajrTime.minutes, 0);
+    maghrib.setHours(maghribTime.hours, maghribTime.minutes, 0);
+    isha.setHours(ishaTime.hours, ishaTime.minutes, 0);
+
+    let targetTime, message;
+
+    if (now >= fajr && now < maghrib) {
+      targetTime = maghrib;
+      message = "Iftara kalan süre";
+    } else if (now >= isha || now < fajr) {
+      // Falls nach Isha oder vor Fajr -> Countdown bis Fajr
+      targetTime = fajr;
+      message = "Sahura kalan süre";
+      if (now >= isha) {
+        fajr.setDate(fajr.getDate() + 1); // Fajr auf den nächsten Tag setzen
+      }
+    } else {
+      document.getElementById('countdown').innerText = "Zwischen Maghrib und Isha.";
+      return;
+    }
+
+    const diff = targetTime - now;
 
     if (diff > 0) {
-      // Calculate hours, minutes, and seconds
       const hours = String(Math.floor(diff / (1000 * 60 * 60))).padStart(2, '0');
       const minutes = String(Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0');
       const seconds = String(Math.floor((diff % (1000 * 60)) / 1000)).padStart(2, '0');
 
-      // Update countdown display
-      document.getElementById('countdown').innerText = `${hours}:${minutes}:${seconds} 
-      bis Maghrib`;
+      document.getElementById('countdown').innerText = `${hours}:${minutes}:${seconds} ${message}`;
     } else {
-      // Once Maghrib time is reached
-      document.getElementById('countdown').innerText = 'Es ist Zeit für Maghrib!';
+      document.getElementById('countdown').innerText = "Zeit erreicht!";
     }
-  }, 1000); // Update every second
+  }
+
+  setInterval(updateCountdown, 1000);
+  updateCountdown();
 
   // Hadith des Tages
   const hadiths = [
