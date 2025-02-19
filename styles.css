@@ -48,7 +48,7 @@ body.dark-mode .container {
 }
 
 body {
-  background-image: url('https://e1.pxfuel.com/desktop-wallpaper/330/959/desktop-wallpaper-turquoise-blue-watercolor-with-vintage-golden-moroccan-pattern-for-walls-blue-watercolor.jpg');
+  background-image: url('https://oboi-telefon.ru/wallpapers/2169/38353.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -56,8 +56,8 @@ body {
 
 .container {
   background-color: rgba(7, 164, 175, 0.9); /* Slight transparency */
-  padding: 20px;
-  border-radius: 4px;
+  padding: 10px;
+  border-radius: 2px;
 }
 
 /* Adjust text color and font sizes */
