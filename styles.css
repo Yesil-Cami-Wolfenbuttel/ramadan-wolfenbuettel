@@ -83,7 +83,7 @@ body #countdown {
 
 /* Adjustable font size for h3 elements */
 h3 {
-  font-size: 2.5em; /* Default size */
+  font-size: 2.0em; /* Default size */
   font-weight: bold;
   color: #ffffff; /* Match the primary text color */
 }
