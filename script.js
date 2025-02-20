@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Dark Mode Toggle
   const toggleTheme = () => {
     document.body.classList.toggle('dark-mode');
   };
@@ -9,10 +8,9 @@ document.addEventListener("DOMContentLoaded", () => {
     themeToggleButton.addEventListener('click', toggleTheme);
   }
 
-  // Gebetszeiten
-  const fajrTime = { hours: 5, minutes: 11 }; // Fajr Zeit (05:11)
-  const maghribTime = { hours: 18, minutes: 03 }; // Maghrib Zeit (18:03)
-  const ishaTime = { hours: 19, minutes: 36 }; // Isha Zeit (19:36)
+  const fajrTime = { hours: 5, minutes: 11 };
+  const maghribTime = { hours: 18, minutes: 3 };
+  const ishaTime = { hours: 19, minutes: 36 };
 
   function updateCountdown() {
     const now = new Date();
@@ -30,14 +28,13 @@ document.addEventListener("DOMContentLoaded", () => {
       targetTime = maghrib;
       message = "Iftara kalan süre";
     } else if (now >= isha || now < fajr) {
-      // Falls nach Isha oder vor Fajr -> Countdown bis Fajr
       targetTime = fajr;
       message = "Sahura kalan süre";
       if (now >= isha) {
-        fajr.setDate(fajr.getDate() + 1); // Fajr auf den nächsten Tag setzen
+        fajr.setDate(fajr.getDate() + 1);
       }
     } else {
-      document.getElementById('countdown').innerText = "Zwischen Maghrib und Isha.";
+      document.getElementById('countdown').innerHTML = "Zwischen Maghrib und Isha.";
       return;
     }
 
@@ -47,8 +44,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const hours = String(Math.floor(diff / (1000 * 60 * 60))).padStart(2, '0');
       const minutes = String(Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0');
       const seconds = String(Math.floor((diff % (1000 * 60)) / 1000)).padStart(2, '0');
-
-      document.getElementById('countdown').innerText = `${hours}:${minutes}:${seconds} ${message}`;
+      
+      document.getElementById('countdown').innerHTML = `<span>${hours}:${minutes}:${seconds}</span><br><span>${message}</span>`;
     } else {
       document.getElementById('countdown').innerText = "Zeit erreicht!";
     }
@@ -57,7 +54,6 @@ document.addEventListener("DOMContentLoaded", () => {
   setInterval(updateCountdown, 1000);
   updateCountdown();
 
-  // Hadith des Tages
   const hadiths = [
     "„ALLAH'IM SENIN IÇIN ORUÇ TUTTUM, SENIN RIZKINLA ORUCUMU AÇIYORUM. HAMD OLSUN VERMIŞ OLDUĞUN NIMETLERE. OH ALLAH. FÜR DICH HABE ICH GEFASTET UND MIT DEINEN GABEN BEGEHE ICH MEIN IFTAR“ - AMIN",
   ];
@@ -67,7 +63,6 @@ document.addEventListener("DOMContentLoaded", () => {
     hadithElement.innerText = hadiths[new Date().getDay() % hadiths.length];
   }
 
-  // Leaflet.js Map Initialization
   var map = L.map('map').setView([52.1654719, 10.5229386], 15);
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; OpenStreetMap contributors'
