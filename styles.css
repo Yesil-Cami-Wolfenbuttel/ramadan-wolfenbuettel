@@ -49,14 +49,18 @@ body.dark-mode .container {
 
 body {
   background-image: url('https://github.com/cihatsuel/Hintergrundbild/blob/main/background.jpg?raw=true');
-  background-size: contain; /* Bild wird skaliert, um vollständig sichtbar zu sein */
-  background-repeat: no-repeat; /* Verhindert das Wiederholen des Bildes */
-  background-position: center; /* Zentriert das Bild auf der Seite */
-  background-attachment: fixed; /* Bild bleibt fixiert beim Scrollen */
-  height: 100vh; /* Sorgt dafür, dass das Bild die volle Höhe des Viewports abdeckt */
-  margin: 0; /* Entfernt Standardabstände des Browsers */
+  background-size: contain; /* Sorgt dafür, dass das gesamte Bild sichtbar bleibt */
+  background-repeat: no-repeat;
+  background-position: center top; /* Zentriert das Bild oben */
+  background-attachment: fixed;
+  min-height: 100vh;
 }
-
+@media screen and (max-width: 768px) {
+  body {
+    background-size: contain; /* Verhindert das Zoomen auf Mobilgeräten */
+    background-attachment: scroll; /* Behebt Darstellungsprobleme auf mobilen Browsern */
+  }
+}
 
 .container {
   background-color: #146e8ae6; /* Slight transparency */
