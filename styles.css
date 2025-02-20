@@ -48,16 +48,21 @@ body.dark-mode .container {
 }
 
 body {
-  background-image: url('https://i.pinimg.com/736x/ea/91/f9/ea91f977877218702bd021857745900e.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-image: url('background.jpg');
+  background-size: contain; /* Bild wird skaliert, um vollständig sichtbar zu sein */
+  background-repeat: no-repeat; /* Verhindert das Wiederholen des Bildes */
+  background-position: center; /* Zentriert das Bild auf der Seite */
+  background-attachment: fixed; /* Bild bleibt fixiert beim Scrollen */
+  height: 100vh; /* Sorgt dafür, dass das Bild die volle Höhe des Viewports abdeckt */
+  margin: 0; /* Entfernt Standardabstände des Browsers */
 }
 
+
 .container {
-  background-color: rgba(8, 124, 133, 0.9); /* Slight transparency */
+  background-color: #146e8ae6; /* Slight transparency */
   padding: 2px;
   border-radius: 0.5px;
+  border: 2px solid #ffffffe6; /* 2px dick, durchgezogener schwarzer Rand */
 }
 
 /* Adjust text color and font sizes */
@@ -86,4 +91,9 @@ h3 {
   font-size: 2.0em; /* Default size */
   font-weight: bold;
   color: #ffffff; /* Match the primary text color */
+}
+
+.container img {
+  width: 100%; /* Bild passt sich der Breite des Containers an */
+  height: auto; /* Höhe wird automatisch angepasst, um das Seitenverhältnis beizubehalten */
 }
