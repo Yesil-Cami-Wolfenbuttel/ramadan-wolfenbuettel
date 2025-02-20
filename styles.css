@@ -71,6 +71,7 @@ body {
 }
 
 #countdown {
+  color: #e0c17c;
   font-size: 2em; /* Larger font size for countdown */
   font-weight: bold;
 }
@@ -88,6 +89,7 @@ body #countdown {
 
 /* Adjustable font size for h3 elements */
 h3 {
+  text-decoration: underline;
   font-size: 2.0em; /* Default size */
   font-weight: bold;
   color: #ffffff; /* Match the primary text color */
