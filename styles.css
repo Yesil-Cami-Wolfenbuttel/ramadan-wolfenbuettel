@@ -48,7 +48,7 @@ body.dark-mode .container {
 }
 
 body {
-  background-image: url('background.jpg');
+  background-image: url('https://github.com/cihatsuel/Hintergrundbild/blob/main/background.jpg?raw=true');
   background-size: contain; /* Bild wird skaliert, um vollständig sichtbar zu sein */
   background-repeat: no-repeat; /* Verhindert das Wiederholen des Bildes */
   background-position: center; /* Zentriert das Bild auf der Seite */
