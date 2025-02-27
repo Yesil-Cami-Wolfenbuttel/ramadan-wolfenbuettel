@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
         fajr.setDate(fajr.getDate() + 1);
       }
     } else {
-      document.getElementById('countdown').innerHTML = "Zwischen Maghrib und Isha.";
+      document.getElementById('countdown').innerHTML = "Hayırlı Iftarlar. Allah kabul etsin!";
       return;
     }
 
