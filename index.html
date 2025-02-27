@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -21,12 +20,11 @@
     <h2>Wolfenbüttel Ramazan Imsakiyesi 2025</h2>
     <blockquote id="hadith" style="font-style: italic; margin-top: 20px; text-align: center;"></blockquote>
     
-    
     <!-- Live Countdown -->
-    <div id="countdown" style="font-size: 1.5em; margin-top: 20px;"></div>
+    <div id="countdown" style="font-size: 1.5em; margin-top: 20px;">Countdown läuft...</div>
 
-    <!-- Tarih -->
-    <h3>Tarih - 01.03.2025</h3>
+    <!-- Aktuelles Datum -->
+    <h3 id="current-date" style="margin-top: 10px; text-align: center;">Heutiges Datum: Wird geladen...</h3>
     
     <!-- Prayer Times -->
     <div id="times" style="margin-top: 20px; text-align: center;">
@@ -47,27 +45,21 @@
           <strong>AKŞAM</strong>
           <strong>YATSI</strong>
         </div>
-        <div style="display: flex; flex-direction: column; align-items: center; width: 70px;">
-          <span>05:11</span>
-          <span>06:57</span>
-          <span>12:35</span>
-          <span>15:23</span>
-          <span>18:03</span>
-          <span>19:36</span>
+        <div id="prayer-times" style="display: flex; flex-direction: column; align-items: center; width: 70px;">
+          <span id="imsak-time">-</span>
+          <span id="gunes-time">-</span>
+          <span id="zuhr-time">-</span>
+          <span id="asr-time">-</span>
+          <span id="maghrib-time">-</span>
+          <span id="isha-time">-</span>
         </div>
       </div>
     </div>
-    
-    
-    
     
     <img src="https://github.com/cihatsuel/Hintergrundbild/blob/main/QRCODE.jpg?raw=true" alt="Mein Bild">
 
     <!-- Map -->
     <div id="map" style="height: 400px; width: 100%; margin-top: 20px;"></div>
-
-    
-
   </div>
 
   <script src="script.js"></script>
