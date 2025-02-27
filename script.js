@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
   updateCountdown();
 
   const hadiths = [
-    "„ALLAH'IM SENIN IÇIN ORUÇ TUTTUM, SENIN RIZKINLA ORUCUMU AÇIYORUM. HAMD OLSUN VERMIŞ OLDUĞUN NIMETLERE. OH ALLAH. FÜR DICH HABE ICH GEFASTET UND MIT DEINEN GABEN BEGEHE ICH MEIN IFTAR“ - AMIN",
+    "„Allah’ım Senin rızân için oruç tuttum. Sana inandım. Sana güvendim. Senin rızkınla orucumu açıyorum.” - (Ebû Dâvud, Savm, 22)",
   ];
 
   const hadithElement = document.getElementById('hadith');
