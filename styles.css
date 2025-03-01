@@ -78,7 +78,14 @@ body {
   color: #e0c17c;
   font-size: 2em; /* Larger font size for countdown */
   font-weight: bold;
+  text-align: center; /* Centers the text */
 }
+
+#countdown div {
+  display: block; /* Forces block display to stack vertically */
+  margin-bottom: 10px; /* Adds some space between time and message */
+}
+
 
 .prayer-times div {
   
