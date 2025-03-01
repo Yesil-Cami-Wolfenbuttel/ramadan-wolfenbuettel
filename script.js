@@ -106,7 +106,12 @@ function startCountdown(times, tomorrowsTimes) {
       const hrs = String(Math.floor(diff / (1000 * 60 * 60))).padStart(2, '0');
       const mins = String(Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0');
       const secs = String(Math.floor((diff % (1000 * 60)) / 1000)).padStart(2, '0');
-      document.getElementById('countdown').textContent = `${hrs}:${mins}:${secs} - ${message}`;
+      document.getElementById('time').textContent = `${hrs}:${mins}:${secs}`;
+      document.getElementById('message').textContent = message;
+
+
+
+
     } else {
       clearInterval(window.countdownInterval);
       document.getElementById('countdown').textContent = 'Süre doldu';
