@@ -36,6 +36,28 @@ function formatDate(date) {
   return date.toLocaleDateString('tr-TR', options);
 }
 
+function getRamadanLabel(now) {
+  const ramadanStart = new Date(2026, 1, 19); // 19.02.2026
+  const ramadanEnd   = new Date(2026, 2, 19); // 19.03.2026 (Ramadan 29)
+
+  // Nur Datum vergleichen (ohne Uhrzeit)
+  const d = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  const start = new Date(ramadanStart.getFullYear(), ramadanStart.getMonth(), ramadanStart.getDate());
+  const end = new Date(ramadanEnd.getFullYear(), ramadanEnd.getMonth(), ramadanEnd.getDate());
+
+  if (d < start || d > end) {
+    return `Tarih - ${formatDate(now)}`;
+  }
+
+  const dayNumber =
+    Math.floor((d - start) / (1000 * 60 * 60 * 24)) + 1; // 1–29
+
+  return `${String(dayNumber).padStart(2, '0')} Ramadan - ${formatDate(now)}`;
+
+}
+
+
+
 function loadPrayerTimes() {
   const now = new Date();
 const today = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
@@ -47,7 +69,8 @@ const today = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0'
   nextDay.setDate(now.getDate() + 1);
   const tomorrowsTimes = prayerTimes.find(pt => pt.date === nextDay.toISOString().split('T')[0]);
 
-  document.getElementById('current-date').textContent = `Tarih - ${formatDate(now)}`;
+  document.getElementById('current-date').textContent = getRamadanLabel(now);
+
 
   if (todaysTimes) {
     document.getElementById('imsak-time').textContent = todaysTimes.imsak;
